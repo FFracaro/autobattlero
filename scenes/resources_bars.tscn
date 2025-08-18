@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://l3j8bxuoib5e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_en27k"]
+bg_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h514g"]
+bg_color = Color(0.643016, 0, 0.0901456, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktxvg"]
+bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rce1r"]
+bg_color = Color(7.70092e-07, 0.266606, 0.725747, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5w55"]
+bg_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slh08"]
+bg_color = Color(0.71537, 0.588494, 0, 1)
+
+[node name="ResourcersBarsCanvasLayer" type="CanvasLayer"]
+
+[node name="ResourcesBars" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LifeProgressBar" type="ProgressBar" parent="ResourcesBars"]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 5.0
+theme_override_styles/background = SubResource("StyleBoxFlat_en27k")
+theme_override_styles/fill = SubResource("StyleBoxFlat_h514g")
+value = 80.0
+rounded = true
+show_percentage = false
+
+[node name="ManaProgressBar" type="ProgressBar" parent="ResourcesBars"]
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 10.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ktxvg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rce1r")
+value = 40.0
+rounded = true
+show_percentage = false
+
+[node name="EnergyProgressBar" type="ProgressBar" parent="ResourcesBars"]
+visible = false
+offset_top = 10.0
+offset_right = 100.0
+offset_bottom = 15.0
+theme_override_styles/background = SubResource("StyleBoxFlat_u5w55")
+theme_override_styles/fill = SubResource("StyleBoxFlat_slh08")
+value = 95.0
+rounded = true
+show_percentage = false
