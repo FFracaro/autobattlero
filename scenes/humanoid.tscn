@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://bjthh3ave0noo"]
+[gd_scene load_steps=12 format=4 uid="uid://bjthh3ave0noo"]
 
 [ext_resource type="Texture2D" uid="uid://dhrir3yfd4w6n" path="res://models/humanoid/Humanoid_Ch36_1001_Diffuse.png" id="1_1ee2n"]
+[ext_resource type="Script" uid="uid://2vlyd2ugdtcq" path="res://scenes/humanoid.gd" id="1_45gbo"]
 [ext_resource type="Texture2D" uid="uid://dke04r5j3egfh" path="res://models/humanoid/Humanoid_Ch36_1001_Glossiness.png" id="2_mg15w"]
 [ext_resource type="Texture2D" uid="uid://cn48bq1of5xs5" path="res://models/humanoid/Humanoid_Ch36_1001_Normal.png" id="3_45gbo"]
 [ext_resource type="AnimationLibrary" uid="uid://dl50xlfpq2hwl" path="res://models/humanoid/humanoid_animations.res" id="4_7vkbm"]
@@ -245,11 +246,15 @@ bind/64/pose = Transform3D(-99.5225, -1.73521, -9.58662, -9.56957, -0.883711, 99
 viewport_path = NodePath("SubViewportContainer/SubViewport")
 
 [node name="Humanoid" type="Node3D"]
+script = ExtResource("1_45gbo")
+character_body_path = NodePath("HumanoidCharacterBody3D")
+animation_player_path = NodePath("AnimationPlayer")
+resources_ui_path = NodePath("SubViewportContainer/SubViewport/ResourcersBarsCanvasLayer")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="HumanoidCharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HumanoidCharacterBody3D"]
 shape = SubResource("CapsuleShape3D_1ee2n")
 
 [node name="Armature" type="Node3D" parent="."]

@@ -39,6 +39,7 @@ rounded = true
 show_percentage = false
 
 [node name="ManaProgressBar" type="ProgressBar" parent="ResourcesBars"]
+layout_mode = 0
 offset_top = 5.0
 offset_right = 120.0
 offset_bottom = 10.0
@@ -50,6 +51,7 @@ show_percentage = false
 
 [node name="EnergyProgressBar" type="ProgressBar" parent="ResourcesBars"]
 visible = false
+layout_mode = 0
 offset_top = 10.0
 offset_right = 100.0
 offset_bottom = 15.0
